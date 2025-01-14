@@ -5,6 +5,7 @@
     <TargetFramework>net9.0-windows</TargetFramework>
     <RootNamespace>界面</RootNamespace>
     <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
