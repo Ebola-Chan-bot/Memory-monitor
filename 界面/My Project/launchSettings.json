@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "界面": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

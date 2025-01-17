@@ -4,17 +4,16 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-  xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10"
   IgnorableNamespaces="uap rescap">
 
 	<Identity
-	  Name="b963c28b-8226-46ef-ab14-c7e04072fa1f"
-	  Publisher="CN=vhtmf"
+	  Name="Memory-Monitor"
+	  Publisher="CN=埃博拉酱"
 	  Version="1.0.0.0" />
 
 	<Properties>
-		<DisplayName>打包</DisplayName>
-		<PublisherDisplayName>vhtmf</PublisherDisplayName>
+		<DisplayName>内存监视器</DisplayName>
+		<PublisherDisplayName>埃博拉酱</PublisherDisplayName>
 		<Logo>Images\StoreLogo.png</Logo>
 	</Properties>
 
@@ -28,21 +27,23 @@
 	</Resources>
 
 	<Applications>
-		<Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Windows.FullTrustApplication" uap10:TrustLevel="mediumIL">
+		<Application Id="App"
+		  Executable="$targetnametoken$.exe"
+		  EntryPoint="$targetentrypoint$">
 			<uap:VisualElements
-			  DisplayName="打包"
-			  Description="打包"
+			  DisplayName="内存监视器"
+			  Description="内存监视器"
 			  BackgroundColor="transparent"
 			  Square150x150Logo="Images\Square150x150Logo.png"
 			  Square44x44Logo="Images\Square44x44Logo.png">
-				<uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png" />
+				<uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png"  Square71x71Logo="Images\SmallTile.png" Square310x310Logo="Images\LargeTile.png"/>
 				<uap:SplashScreen Image="Images\SplashScreen.png" />
 			</uap:VisualElements>
 		</Application>
 	</Applications>
 
 	<Capabilities>
-		<Capability Name="internetClient" />
 		<rescap:Capability Name="runFullTrust" />
+		<rescap:Capability Name="allowElevation" />
 	</Capabilities>
 </Package>
